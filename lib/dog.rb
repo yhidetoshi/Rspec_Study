@@ -6,4 +6,8 @@ class Dog
      @fangs = 2
   end
 
+  def alived?
+    true
+  end
+
 end
