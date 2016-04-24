@@ -26,6 +26,29 @@ or
 (1 + 1).should == 2
 ```
 
+**[複数のexampleを扱う]**
 
+-> `describe`の中には複数の`example (it do ... end)`が書ける
+
+-> 1つのexampleの中に複数のエクスペクテーション(extect)を書けるが
+途中でexpectが失敗すると次のexpectがどうなるかわからないので
+**1つのexampleにつき1つのexpectにするのが原則**
+
+```
+describe '四則演算' do
+  it '1 + 1 は 2になる' do
+     expect(1 + 1).to eq 2
+  end
+  it '3 * 3 は9になること' do
+     expect(3 * 3).to eq 9
+   end
+end
+
+
+Finished in 0.00196 seconds (files took 0.18043 seconds to load)
+2 examples, 0 failures
+
+(注釈) it do ... endを2回定義しているから2examplesになっている
+```
 
 
